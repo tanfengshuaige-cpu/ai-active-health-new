@@ -85,12 +85,25 @@ text {
   line-height: 38rpx;
 }
 
+.hero-art-wrap {
+  position: absolute;
+  right: 20rpx;
+  top: 26rpx;
+  width: 236rpx;
+  height: 236rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.86), rgba(216, 248, 237, 0.8));
+  box-shadow: 0 18rpx 34rpx rgba(22, 111, 86, 0.12);
+}
+
 .hero-art {
   position: absolute;
-  right: -24rpx;
-  top: 10rpx;
-  width: 330rpx;
-  height: 250rpx;
+  left: 50%;
+  top: 50%;
+  width: 260rpx;
+  height: 260rpx;
+  transform: translate(-50%, -50%);
   opacity: 0.94;
 }
 
@@ -220,12 +233,12 @@ text {
 }
 
 .chart-card {
-  height: 360rpx;
+  height: 382rpx;
   margin-top: 18rpx;
-  padding: 16rpx 12rpx 8rpx;
+  padding: 10rpx 12rpx 8rpx;
   border: 1rpx solid rgba(25, 125, 94, 0.1);
   border-radius: 26rpx;
-  background: #fff;
+  background: linear-gradient(180deg, #ffffff, #fbfffd);
   box-shadow: 0 14rpx 34rpx rgba(27, 84, 63, 0.07);
 }
 
