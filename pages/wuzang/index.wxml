@@ -43,6 +43,13 @@
   </view>
 
   <view class="chart-card">
+    <view class="chart-summary">
+      <view>
+        <text>综合指数走势</text>
+        <text>近 7 天稳中有升</text>
+      </view>
+      <text>+5</text>
+    </view>
     <ec-canvas id="trend-chart" canvas-id="trend-chart" ec="{{ec}}"></ec-canvas>
   </view>
 

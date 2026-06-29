@@ -9,18 +9,8 @@ function initTrendChart(canvas, width, height, dpr) {
   canvas.setChart(chart)
 
   chart.setOption({
-    color: ["#ff4d57", "#0aaf60", "#ff9f1c", "#12b8a6", "#2f80ed"],
-    grid: { left: 6, right: 8, top: 58, bottom: 46, containLabel: true },
-    legend: {
-      top: 8,
-      left: "center",
-      icon: "circle",
-      itemWidth: 7,
-      itemHeight: 7,
-      itemGap: 12,
-      textStyle: { color: "#4b5563", fontSize: 11, fontWeight: 600 },
-      data: ["心", "肝", "脾", "肺", "肾"]
-    },
+    color: ["#0a8f68"],
+    grid: { left: 8, right: 14, top: 18, bottom: 34, containLabel: true },
     xAxis: {
       type: "category",
       boundaryGap: false,
@@ -31,8 +21,8 @@ function initTrendChart(canvas, width, height, dpr) {
     },
     yAxis: {
       type: "value",
-      min: 60,
-      max: 95,
+      min: 74,
+      max: 86,
       splitNumber: 3,
       axisLabel: { show: false },
       axisLine: { show: false },
@@ -40,11 +30,38 @@ function initTrendChart(canvas, width, height, dpr) {
       splitLine: { lineStyle: { color: "#e8f0ec", type: "dashed" } }
     },
     series: [
-      { name: "心", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(255,77,87,.16)" }, data: [79, 80, 81, 82, 81, 82, 83] },
-      { name: "肝", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(10,175,96,.16)" }, data: [82, 82, 83, 83, 84, 84, 85] },
-      { name: "脾", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(255,159,28,.14)" }, data: [75, 76, 76, 77, 78, 78, 79] },
-      { name: "肺", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(18,184,166,.14)" }, data: [86, 85, 85, 84, 84, 83, 83] },
-      { name: "肾", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(47,128,237,.14)" }, data: [72, 73, 73, 74, 74, 75, 75] }
+      {
+        name: "综合指数",
+        type: "line",
+        smooth: 0.45,
+        symbol: "circle",
+        symbolSize: 7,
+        lineStyle: {
+          width: 4,
+          color: "#0a8f68",
+          shadowBlur: 8,
+          shadowColor: "rgba(10,143,104,.2)"
+        },
+        itemStyle: {
+          color: "#ffffff",
+          borderColor: "#0a8f68",
+          borderWidth: 3
+        },
+        areaStyle: {
+          color: {
+            type: "linear",
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [
+              { offset: 0, color: "rgba(10,143,104,.22)" },
+              { offset: 1, color: "rgba(10,143,104,0)" }
+            ]
+          }
+        },
+        data: [78, 79, 80, 81, 80, 82, 83]
+      }
     ]
   })
 
