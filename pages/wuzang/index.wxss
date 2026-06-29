@@ -224,7 +224,7 @@ text {
 }
 
 .chart-card {
-  height: 430rpx;
+  min-height: 430rpx;
   margin-top: 18rpx;
   margin-bottom: 32rpx;
   padding: 24rpx 18rpx 22rpx;
