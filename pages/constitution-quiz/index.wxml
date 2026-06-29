@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="topbar"><text>中医体质答题</text></view>
+
+  <view class="progress-card">
+    <text>第 {{current + 1}} / {{questions.length}} 题</text>
+    <view><view style="width: {{(current + 1) * 100 / questions.length}}%"></view></view>
+  </view>
+
+  <view class="question-card">
+    <text class="question-title">{{questions[current].title}}</text>
+    <text class="question-tip">请根据最近 3-6 个月的真实感受选择</text>
+    <view class="option-list">
+      <view wx:for="{{questions[current].options}}" wx:key="*this" class="{{selected[current] === item ? 'active' : ''}}" bindtap="onSelect" data-value="{{item}}">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <button class="next-btn" bindtap="onNext">{{current === questions.length - 1 ? '查看结果' : '下一题'}}</button>
+</view>

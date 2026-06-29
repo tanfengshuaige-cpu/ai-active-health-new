@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="result-hero">
+    <text class="eyebrow">体质测评结果</text>
+    <text class="result-title">血瘀质</text>
+    <text class="result-desc">当前表现以气血运行不畅为主要倾向，建议从作息、饮食和适度运动入手调养。</text>
+  </view>
+
+  <view class="risk-card">
+    <view class="section-title"><view></view><text>易出现状态</text></view>
+    <view class="risk-list">
+      <text wx:for="{{risks}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="advice-card" wx:for="{{sections}}" wx:key="title">
+    <text>{{item.title}}</text>
+    <text>{{item.text}}</text>
+  </view>
+
+  <view class="disclaimer">以上结果仅作为日常健康管理参考，如有明显不适，请及时咨询专业医生。</view>
+  <button bindtap="onBackHome">返回首页</button>
+</view>

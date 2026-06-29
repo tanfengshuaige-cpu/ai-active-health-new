@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wuzang/index",
+    "pages/record/index",
+    "pages/mine/index",
+    "pages/ai/index",
+    "pages/ai-result/index",
+    "pages/wuzang-test/index",
+    "pages/wuzang-quiz/index",
+    "pages/wuzang-result/index",
+    "pages/tongue/index",
+    "pages/tongue-result/index",
+    "pages/handwriting/index",
+    "pages/handwriting-result/index",
+    "pages/health-input/index",
+    "pages/profile-form/index",
+    "pages/health-report/index",
+    "pages/fun-test/index",
+    "pages/fun-quiz/index",
+    "pages/fun-result/index",
+    "pages/soup-detail/index",
+    "pages/soup-video/index",
+    "pages/doctor-science/index",
+    "pages/doctor-video/index",
+    "pages/health-metric/index",
+    "pages/constitution-test/index",
+    "pages/constitution-quiz/index",
+    "pages/constitution-result/index"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#f7faf8",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

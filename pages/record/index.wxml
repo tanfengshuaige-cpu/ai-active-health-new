@@ -1,0 +1,60 @@
+<view class="page">
+  <view class="header">
+    <text class="page-title">健康记录</text>
+    <text class="page-desc">查看测评、数据录入与 AI 问询历史</text>
+  </view>
+
+  <view class="summary-card">
+    <view>
+      <text>本周健康概览</text>
+      <text>记录越完整，AI 调养建议越准确</text>
+    </view>
+    <view class="summary-grid">
+      <view><text>12</text><text>测评记录</text></view>
+      <view><text>36</text><text>健康数据</text></view>
+      <view><text>82</text><text>五脏指数</text></view>
+    </view>
+  </view>
+
+  <scroll-view class="filter-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="filter-row">
+      <view class="{{activeKey === item.key ? 'active' : ''}}" wx:for="{{recordTabs}}" wx:key="key" bindtap="onRecordTab" data-key="{{item.key}}">
+        <text>{{item.label}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="timeline">
+    <view class="record-card" wx:for="{{currentRecords}}" wx:key="time" bindtap="onOpenRecord" data-url="{{item.url}}">
+      <image src="{{item.icon}}" mode="aspectFit" />
+      <view class="record-copy">
+        <view>
+          <text>{{item.title}}</text>
+          <text>{{item.result}}</text>
+        </view>
+        <text>{{item.desc}}</text>
+        <text>{{item.time}}</text>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <view class="todo-card">
+    <view class="section-title"><view></view><text>待完善项目</text></view>
+    <view class="todo-row">
+      <image src="../../assets/images/data-habit.png" mode="aspectFit" />
+      <view>
+        <text>今晚补充生活习惯</text>
+        <text>睡眠、饮水、运动会影响五脏指数判断</text>
+      </view>
+      <text>去完善</text>
+    </view>
+  </view>
+
+  <view class="tabbar">
+    <view class="tab {{item.key}} {{item.active ? 'active' : ''}}" wx:for="{{tabs}}" wx:key="key" bindtap="onTabTap" data-key="{{item.key}}">
+      <view class="tab-icon"></view>
+      <text>{{item.label}}</text>
+    </view>
+  </view>
+</view>

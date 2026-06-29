@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="nav">
+    <view class="back" bindtap="onBack">‹</view>
+    <text>{{title}}</text>
+  </view>
+
+  <view class="progress-card">
+    <text>共 4 题</text>
+    <view><view></view></view>
+  </view>
+
+  <view class="question-card" wx:for="{{questions}}" wx:key="*this">
+    <view class="question-title">
+      <text>{{index + 1}}</text>
+      <text>{{item}}</text>
+    </view>
+    <view class="option-row {{optionIndex === 0 ? 'active' : ''}}" wx:for="{{options}}" wx:for-item="option" wx:for-index="optionIndex" wx:key="*this">
+      <view></view>
+      <text>{{option}}</text>
+    </view>
+  </view>
+
+  <button class="bottom-btn" bindtap="onSubmit">提交测评</button>
+</view>

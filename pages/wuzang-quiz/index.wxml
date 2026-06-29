@@ -1,0 +1,52 @@
+<view class="page">
+  <view class="nav">
+    <view class="back" bindtap="onBack">‹</view>
+    <text>中医测五脏</text>
+  </view>
+
+  <view class="top-card">
+    <view>
+      <text class="kicker">五脏问卷</text>
+      <text class="title">按近期真实状态选择</text>
+      <text class="desc">问题围绕情绪、精神、睡眠与出汗情况，帮助判断需要重点调养的脏腑方向。</text>
+    </view>
+    <view class="progress-box">
+      <text>{{answeredCount}}</text>
+      <text>/{{questions.length}}</text>
+    </view>
+  </view>
+
+  <view class="progress-track">
+    <view class="progress-fill" style="width: {{progress}}%;"></view>
+  </view>
+
+  <view class="notice">
+    <text>该内容仅供参考，不构成医疗诊断/治疗建议，如有不适请及时前往正规医疗机构就诊。</text>
+  </view>
+
+  <view class="question-list">
+    <view class="question-card" wx:for="{{questions}}" wx:key="id">
+      <view class="question-head">
+        <text class="question-index">{{index + 1}}</text>
+        <text class="question-title">{{item.title}}</text>
+      </view>
+      <view class="option-list">
+        <view
+          class="option {{item.selected === option ? 'active' : ''}}"
+          wx:for="{{item.options}}"
+          wx:for-item="option"
+          wx:key="*this"
+          bindtap="onSelect"
+          data-qid="{{item.id}}"
+          data-option="{{option}}"
+        >
+          <text>{{option}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <button class="bottom-btn {{answeredCount === questions.length ? 'ready' : ''}}" bindtap="onSubmit">
+    {{answeredCount === questions.length ? '查看测评结果' : '继续完成'}}
+  </button>
+</view>

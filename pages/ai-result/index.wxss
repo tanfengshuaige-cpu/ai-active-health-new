@@ -1,0 +1,476 @@
+.page {
+  min-height: 100vh;
+  padding: calc(env(safe-area-inset-top) + 88rpx) 24rpx calc(132rpx + env(safe-area-inset-bottom));
+  background:
+    radial-gradient(circle at 18% 0%, rgba(189, 237, 218, 0.48), transparent 32%),
+    linear-gradient(180deg, #f7fbf8 0%, #f3f8f5 100%);
+  color: #101817;
+  overflow-x: hidden;
+}
+
+text {
+  display: block;
+}
+
+button::after {
+  border: 0;
+}
+
+.nav {
+  position: relative;
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18rpx;
+}
+
+.nav text {
+  color: #101817;
+  font-size: 34rpx;
+  line-height: 44rpx;
+  font-weight: 900;
+}
+
+.back {
+  position: absolute;
+  left: 0;
+  top: 3rpx;
+  width: 66rpx;
+  height: 66rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #15221f;
+  font-size: 58rpx;
+  line-height: 66rpx;
+}
+
+.summary-card {
+  position: relative;
+  min-height: 286rpx;
+  overflow: hidden;
+  padding: 34rpx 30rpx;
+  border: 1rpx solid rgba(13, 150, 109, 0.18);
+  border-radius: 30rpx;
+  background: linear-gradient(135deg, #ecfbf5 0%, #ffffff 58%, #dff5ee 100%);
+  box-shadow: 0 18rpx 38rpx rgba(20, 109, 80, 0.1);
+}
+
+.summary-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(240, 252, 247, 0.96) 0%, rgba(240, 252, 247, 0.82) 48%, rgba(240, 252, 247, 0.18) 100%);
+}
+
+.summary-copy {
+  position: relative;
+  z-index: 2;
+  width: 430rpx;
+}
+
+.eyebrow {
+  width: fit-content;
+  padding: 8rpx 18rpx;
+  border-radius: 999rpx;
+  color: #067f5d;
+  background: rgba(9, 149, 108, 0.1);
+  font-size: 24rpx;
+  line-height: 30rpx;
+  font-weight: 800;
+}
+
+.summary-title {
+  margin-top: 18rpx;
+  color: #006b50;
+  font-size: 54rpx;
+  line-height: 64rpx;
+  font-weight: 900;
+}
+
+.summary-subtitle {
+  margin-top: 10rpx;
+  color: #8a4f20;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  font-weight: 900;
+}
+
+.summary-desc {
+  margin-top: 12rpx;
+  color: #40504c;
+  font-size: 27rpx;
+  line-height: 38rpx;
+}
+
+.summary-art {
+  position: absolute;
+  right: -28rpx;
+  top: 0;
+  bottom: 0;
+  width: 310rpx;
+  z-index: 0;
+  opacity: 0.84;
+}
+
+.summary-art image {
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  margin-top: 24rpx;
+  padding: 24rpx;
+  border: 1rpx solid rgba(25, 125, 94, 0.1);
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 14rpx 34rpx rgba(27, 84, 63, 0.07);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+}
+
+.section-title view {
+  width: 8rpx;
+  height: 38rpx;
+  margin-right: 14rpx;
+  border-radius: 999rpx;
+  background: #0a8f68;
+}
+
+.section-title text {
+  color: #101817;
+  font-size: 34rpx;
+  line-height: 44rpx;
+  font-weight: 900;
+}
+
+.radar-card {
+  display: flex;
+  align-items: center;
+  margin-top: 22rpx;
+  padding: 24rpx 20rpx;
+  border: 1rpx solid #dceee8;
+  border-radius: 24rpx;
+  background: linear-gradient(180deg, #ffffff, #fbfffd);
+}
+
+.radar {
+  position: relative;
+  width: 320rpx;
+  height: 320rpx;
+  flex: 0 0 320rpx;
+}
+
+.ring,
+.axis,
+.radar-fill {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ring {
+  border: 2rpx solid #d8e5e1;
+  clip-path: polygon(50% 0%, 98% 35%, 80% 95%, 20% 95%, 2% 35%);
+}
+
+.ring-1 {
+  width: 252rpx;
+  height: 252rpx;
+}
+
+.ring-2 {
+  width: 178rpx;
+  height: 178rpx;
+}
+
+.ring-3 {
+  width: 104rpx;
+  height: 104rpx;
+}
+
+.axis {
+  width: 2rpx;
+  height: 250rpx;
+  background: #d8e5e1;
+  transform-origin: center center;
+}
+
+.axis-1 { transform: translate(-50%, -50%) rotate(0deg); }
+.axis-2 { transform: translate(-50%, -50%) rotate(72deg); }
+.axis-3 { transform: translate(-50%, -50%) rotate(144deg); }
+.axis-4 { transform: translate(-50%, -50%) rotate(216deg); }
+.axis-5 { transform: translate(-50%, -50%) rotate(288deg); }
+
+.radar-fill {
+  width: 190rpx;
+  height: 178rpx;
+  background: rgba(30, 154, 204, 0.25);
+  border: 3rpx solid rgba(30, 154, 204, 0.72);
+  clip-path: polygon(50% 10%, 74% 42%, 61% 86%, 20% 68%, 31% 36%);
+}
+
+.label {
+  position: absolute;
+  color: #45524f;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  font-weight: 800;
+}
+
+.label.heart { right: 36rpx; top: 82rpx; }
+.label.liver { left: 18rpx; top: 146rpx; }
+.label.spleen { left: 124rpx; bottom: 4rpx; }
+.label.lung { left: 124rpx; top: 0; }
+.label.kidney { left: 46rpx; top: 64rpx; }
+
+.organ-list {
+  flex: 1;
+  display: grid;
+  gap: 12rpx;
+  margin-left: 18rpx;
+}
+
+.organ-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50rpx;
+  padding: 0 14rpx;
+  border-radius: 14rpx;
+  background: #f4faf7;
+}
+
+.organ-name {
+  color: #222d2a;
+  font-size: 25rpx;
+  font-weight: 900;
+}
+
+.organ-value {
+  color: #0a8f68;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.organ-item.heart .organ-value,
+.organ-item.liver .organ-value,
+.organ-item.kidney .organ-value {
+  color: #df6f24;
+}
+
+.hint {
+  margin-top: 18rpx;
+  color: #4b5a56;
+  font-size: 27rpx;
+  line-height: 40rpx;
+}
+
+.diagnosis-list {
+  display: grid;
+  gap: 16rpx;
+  margin-top: 20rpx;
+}
+
+.diagnosis-card {
+  padding: 22rpx;
+  border-radius: 22rpx;
+  border: 1rpx solid #dceee8;
+}
+
+.diagnosis-card.primary {
+  background: linear-gradient(180deg, #eafbf4, #ffffff);
+  border-color: #bce8d9;
+}
+
+.diagnosis-card.secondary {
+  background: linear-gradient(180deg, #fff8ef, #ffffff);
+  border-color: #f4dcc0;
+}
+
+.diagnosis-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.diagnosis-head text:first-child {
+  color: #006b50;
+  font-size: 32rpx;
+  line-height: 42rpx;
+  font-weight: 900;
+}
+
+.secondary .diagnosis-head text:first-child {
+  color: #8a4f20;
+}
+
+.diagnosis-head text:last-child {
+  padding: 8rpx 16rpx;
+  border-radius: 999rpx;
+  color: #fff;
+  background: #0a8f68;
+  font-size: 23rpx;
+  line-height: 28rpx;
+  font-weight: 800;
+}
+
+.secondary .diagnosis-head text:last-child {
+  background: #c77a35;
+}
+
+.diagnosis-desc {
+  margin-top: 14rpx;
+  color: #3f4d49;
+  font-size: 27rpx;
+  line-height: 40rpx;
+}
+
+.risk-tabs {
+  display: flex;
+  gap: 14rpx;
+  margin-top: 20rpx;
+}
+
+.risk-tabs text {
+  padding: 12rpx 26rpx;
+  border-radius: 999rpx;
+  color: #66736f;
+  background: #f0f4f2;
+  font-size: 26rpx;
+  line-height: 32rpx;
+  font-weight: 800;
+}
+
+.risk-tabs .active {
+  color: #fff;
+  background: #0a8f68;
+}
+
+.risk-list {
+  margin-top: 14rpx;
+  overflow: hidden;
+  border: 1rpx solid #e4eee9;
+  border-radius: 22rpx;
+}
+
+.risk-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88rpx;
+  padding: 0 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #edf3f0;
+}
+
+.risk-row:last-child {
+  border-bottom: 0;
+}
+
+.risk-name {
+  color: #16211f;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  font-weight: 900;
+}
+
+.risk-alias {
+  margin-top: 4rpx;
+  color: #7a8783;
+  font-size: 23rpx;
+  line-height: 30rpx;
+}
+
+.risk-rate {
+  color: #0a8f68;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  font-weight: 900;
+}
+
+.recipe-card {
+  margin-top: 20rpx;
+  overflow: hidden;
+  border: 1rpx solid #e8d8c2;
+  border-radius: 24rpx;
+  background: linear-gradient(180deg, #fffaf2, #ffffff);
+}
+
+.recipe-head {
+  padding: 24rpx;
+  background: linear-gradient(90deg, #fff0d9, #fff8ef);
+}
+
+.recipe-head text:first-child {
+  color: #7a4417;
+  font-size: 34rpx;
+  line-height: 44rpx;
+  font-weight: 900;
+}
+
+.recipe-head text:last-child {
+  margin-top: 6rpx;
+  color: #a56628;
+  font-size: 25rpx;
+  line-height: 32rpx;
+  font-weight: 800;
+}
+
+.recipe-row {
+  display: flex;
+  padding: 20rpx 22rpx;
+  border-top: 1rpx solid #f1e4d4;
+}
+
+.recipe-label {
+  width: 88rpx;
+  color: #a56628;
+  font-size: 27rpx;
+  line-height: 38rpx;
+  font-weight: 900;
+}
+
+.recipe-text {
+  flex: 1;
+  color: #3f4d49;
+  font-size: 27rpx;
+  line-height: 38rpx;
+}
+
+.notice {
+  margin-top: 24rpx;
+  padding: 22rpx 24rpx;
+  border-radius: 22rpx;
+  background: rgba(10, 143, 104, 0.08);
+}
+
+.notice text {
+  color: #40504c;
+  font-size: 25rpx;
+  line-height: 38rpx;
+}
+
+.bottom-btn {
+  position: fixed;
+  left: 38rpx;
+  right: 38rpx;
+  bottom: calc(24rpx + env(safe-area-inset-bottom));
+  z-index: 10;
+  height: 76rpx;
+  min-height: 76rpx;
+  padding: 0;
+  border-radius: 999rpx;
+  color: #fff;
+  background: linear-gradient(180deg, #15b887, #07835f);
+  font-size: 30rpx;
+  line-height: 76rpx;
+  font-weight: 900;
+  box-shadow: 0 15rpx 28rpx rgba(0, 122, 90, 0.22);
+}

@@ -1,0 +1,89 @@
+<view class="page">
+  <view class="nav">
+    <view class="back" bindtap="onBack">‹</view>
+    <text>中医测五脏</text>
+  </view>
+
+  <view class="result-hero">
+    <view>
+      <text class="hero-kicker">AI 生成结果</text>
+      <text class="hero-title">重点调养：肝、肾、心</text>
+      <text class="hero-desc">根据您的问卷表现，当前需优先关注肝、肾、心三个脏腑的调养。</text>
+    </view>
+    <image src="../../assets/images/icon-wuzang.png" mode="aspectFit" />
+  </view>
+
+  <view class="panel">
+    <view class="section-title">
+      <view></view>
+      <text>肝脏分析</text>
+    </view>
+    <text class="section-sub">数值越高，表示该系统的风险越高</text>
+
+    <view class="chart-card">
+      <view class="grid-line line-1"></view>
+      <view class="grid-line line-2"></view>
+      <view class="grid-line line-3"></view>
+      <view class="bar-list">
+        <view class="bar-item" wx:for="{{bars}}" wx:key="name">
+          <view class="bar-wrap">
+            <text class="bar-value">{{item.value}}</text>
+            <view class="bar {{item.key}}" style="height: {{item.height}}rpx;"></view>
+          </view>
+          <text class="bar-name">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="result-banner">
+      <text>根据测评分析，</text>
+      <text>您需重点调养的三个脏腑为：<text class="highlight">肝、肾、心</text></text>
+    </view>
+
+    <view class="organ-detail" wx:for="{{organs}}" wx:key="name">
+      <view class="organ-head">
+        <text>{{item.name}}</text>
+        <text>{{item.tag}}</text>
+      </view>
+      <text class="organ-text">{{item.desc}}</text>
+      <view class="symptom-tags">
+        <text wx:for="{{item.symptoms}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel diet-panel">
+    <view class="section-title">
+      <view></view>
+      <text>饮食建议</text>
+    </view>
+    <view class="recipe-card">
+      <view class="recipe-copy">
+        <text class="recipe-title">消肥健身茶</text>
+        <view class="recipe-row" wx:for="{{recipe}}" wx:key="label">
+          <text class="recipe-label">{{item.label}}</text>
+          <text class="recipe-text">{{item.text}}</text>
+        </view>
+      </view>
+      <image src="../../assets/images/card-soup.png" mode="aspectFill" />
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">
+      <view></view>
+      <text>常见症状</text>
+    </view>
+    <view class="common-tags">
+      <text wx:for="{{commonSymptoms}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="notice">
+    <text>该内容仅供参考，不构成医疗诊断/治疗建议，如有不适请及时前往正规医疗机构就诊。</text>
+  </view>
+
+  <button class="bottom-btn" bindtap="goList">返回测评列表</button>
+</view>

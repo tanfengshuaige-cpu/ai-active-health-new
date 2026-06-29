@@ -1,0 +1,108 @@
+<view class="page">
+  <view class="header">
+    <view class="brand-row">
+      <text class="brand-logo">AI+</text>
+      <text class="brand-name">主动健康</text>
+    </view>
+    <view class="greeting">
+      <text class="sun">☀</text>
+      <text>您好，今天先做一次健康评估</text>
+    </view>
+  </view>
+
+  <view class="hero">
+    <image class="hero-art" src="../../assets/images/banner-person.png" mode="aspectFit" />
+    <view class="hero-mask"></view>
+    <view class="hero-copy">
+      <text class="hero-title">主动健康，</text>
+      <text class="hero-title">从评估开始</text>
+      <text class="hero-subtitle">AI 问询、五脏测评、健康数据管理</text>
+      <view class="hero-actions">
+        <button class="hero-btn primary" bindtap="onStartAssess">开始评估 <text>›</text></button>
+        <button class="hero-btn secondary" bindtap="onInputHealth">录入数据</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">
+      <view></view>
+      <text>常用功能</text>
+    </view>
+    <view class="feature-grid">
+      <view class="feature-card {{item.key}}" wx:for="{{featureCards}}" wx:key="key" bindtap="onFeatureTap" data-key="{{item.key}}">
+        <image class="feature-icon" src="{{item.image}}" mode="aspectFit" />
+        <view class="feature-text">
+          <text class="feature-title">{{item.title}}</text>
+          <text class="feature-desc">{{item.desc1}}</text>
+          <text class="feature-desc">{{item.desc2}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="section-head">
+      <view class="section-title">
+        <view></view>
+        <text>健康数据</text>
+      </view>
+      <text class="more">左右滑动查看更多 ›</text>
+    </view>
+    <scroll-view scroll-x enhanced show-scrollbar="{{false}}" class="metric-scroll">
+      <view class="metric-list">
+        <view class="metric-card {{item.key}}" wx:for="{{dataCards}}" wx:key="key" bindtap="onMetricTap" data-key="{{item.key}}">
+          <image class="metric-icon" src="{{item.image}}" mode="aspectFit" />
+          <text class="metric-name">{{item.title}}</text>
+          <text class="metric-value {{item.status ? 'status' : ''}}">{{item.value}}</text>
+          <text class="metric-unit {{item.unit ? '' : 'empty'}}">{{item.unit}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">
+      <view></view>
+      <text>养生与科普</text>
+    </view>
+    <view class="wellness-grid">
+      <view class="wellness-card {{item.key}}" wx:for="{{adviceCards}}" wx:key="key" bindtap="onAdviceTap" data-key="{{item.key}}">
+        <image class="wellness-image" src="{{item.image}}" mode="aspectFill" />
+        <view class="wellness-mask"></view>
+        <view class="wellness-text">
+          <text class="wellness-title">{{item.title}}</text>
+          <view class="tags">
+            <text wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+          </view>
+          <text class="wellness-desc">{{item.desc}}</text>
+          <view class="wellness-btn">{{item.action}} ›</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section recommend-section">
+    <view class="section-title">
+      <view></view>
+      <text>精彩推荐</text>
+    </view>
+    <view class="recommend-grid">
+      <view class="recommend-card {{item.key}}" wx:for="{{recommendCards}}" wx:key="key" bindtap="onRecommendTap" data-key="{{item.key}}">
+        <view class="recommend-text">
+          <text class="recommend-title">{{item.title}}</text>
+          <text class="recommend-desc">{{item.desc}}</text>
+          <view class="recommend-btn">{{item.action}} ›</view>
+        </view>
+        <image class="recommend-image" src="{{item.image}}" mode="aspectFit" />
+      </view>
+    </view>
+  </view>
+
+  <view class="tabbar">
+    <view class="tab {{item.key}} {{item.active ? 'active' : ''}}" wx:for="{{tabs}}" wx:key="key" bindtap="onTabTap" data-key="{{item.key}}">
+      <view class="tab-icon"></view>
+      <text>{{item.label}}</text>
+    </view>
+  </view>
+</view>

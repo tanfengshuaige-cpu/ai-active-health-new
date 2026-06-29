@@ -1,0 +1,60 @@
+<view class="page">
+  <view class="nav-title">中医五脏指数</view>
+
+  <view class="intro-card">
+    <text class="intro-title">中医五脏指数</text>
+    <text class="intro-en">ZHONG YI WU ZANG ZHI SHU</text>
+    <text class="intro-desc">基于中医天人合一理论，结合五运六气、中医五脏理论与健康数据，分析心、肝、脾、肺、肾在不同时辰的运行状态，并给出参考建议。</text>
+  </view>
+
+  <scroll-view class="system-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="system-tabs">
+      <text wx:for="{{systems}}" wx:key="*this" class="{{index === 0 ? 'active' : ''}}">{{item}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="chart-panel">
+    <view class="chart-head">
+      <text>今日趋势</text>
+      <text>近 24 小时</text>
+    </view>
+    <view class="chart-lines">
+      <view></view><view></view><view></view><view></view>
+    </view>
+    <view class="trend-line"></view>
+    <view class="dots">
+      <view wx:for="{{[1,2,3,4,5]}}" wx:key="*this"></view>
+    </view>
+    <view class="x-labels">
+      <text>子时</text><text>卯时</text><text>午时</text><text>酉时</text><text>亥时</text>
+    </view>
+  </view>
+
+  <view class="range-card">
+    <view class="range-item" wx:for="{{ranges}}" wx:key="label">
+      <view style="background: {{item.color}}"></view>
+      <text class="{{item.active ? 'active' : ''}}">{{item.label}}</text>
+      <text class="{{item.active ? 'active' : ''}}">{{item.value}}</text>
+    </view>
+  </view>
+
+  <view class="status-card">
+    <view class="section-title"><view></view><text>当前状态：好</text></view>
+    <text class="status-text">{{advice}}</text>
+  </view>
+
+  <view class="season-card" bindtap="onConstitutionTap">
+    <image src="../../assets/images/wuzang-orbit.png" mode="aspectFit" />
+    <view>
+      <text>中医测体质</text>
+      <text>结合近期状态辨析体质，查看饮食、起居、运动与调养建议。</text>
+    </view>
+  </view>
+
+  <view class="tabbar">
+    <view class="tab {{item.key}} {{item.active ? 'active' : ''}}" wx:for="{{tabs}}" wx:key="key" bindtap="onTabTap" data-key="{{item.key}}">
+      <view class="tab-icon"></view>
+      <text>{{item.label}}</text>
+    </view>
+  </view>
+</view>

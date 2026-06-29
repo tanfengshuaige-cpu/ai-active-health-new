@@ -1,0 +1,9 @@
+page {
+  min-height: 100%;
+  background: #f7faf8;
+  font-family: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+button {
+  font-family: inherit;
+}

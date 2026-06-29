@@ -1,0 +1,17 @@
+<view class="page">
+  <view class="nav"><view class="back" bindtap="onBack">‹</view><text>{{title}}</text></view>
+  <view class="panel">
+    <view class="section-title"><view></view><text>数据采集-{{title}}（选填）</text></view>
+    <view class="field-row" wx:for="{{fields}}" wx:key="*this"><text>{{item}}</text><view>{{item}} 数值</view></view>
+    <button class="inline-btn" bindtap="onSave">保存</button>
+  </view>
+  <view class="panel">
+    <view class="section-title"><view></view><text>数据趋势</text></view>
+    <view class="field-row"><text>开始时间</text><view>2026-06-16</view></view>
+    <view class="field-row"><text>结束时间</text><view>2026-06-26</view></view>
+    <button class="inline-btn" bindtap="onQuery">查询</button>
+  </view>
+  <view class="tabs"><text wx:for="{{activeTabs}}" wx:key="*this" class="{{index === 0 ? 'active' : ''}}">{{item}}</text></view>
+  <view class="notice">{{normal}}</view>
+  <view class="chart-card"><view class="chart-grid"><view></view><view></view><view></view><view></view></view><view class="safe-line top"></view><view class="safe-line bottom"></view><view class="trend-line"></view></view>
+</view>

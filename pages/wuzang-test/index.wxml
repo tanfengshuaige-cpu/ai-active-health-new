@@ -1,0 +1,54 @@
+<view class="page">
+  <view class="nav">
+    <view class="back" bindtap="onBack">‹</view>
+    <text>中医测五脏</text>
+  </view>
+
+  <view class="hero-card">
+    <image class="hero-art" src="../../assets/images/banner-person.png" mode="aspectFill" />
+    <view class="hero-copy">
+      <text class="hero-kicker">AI 五脏评估</text>
+      <text class="hero-title">测五脏，识体质</text>
+      <text class="hero-desc">通过情绪、睡眠、出汗、饮食等日常状态，评估五脏六腑平衡情况。</text>
+    </view>
+  </view>
+
+  <view class="panel intro-panel">
+    <view class="section-title">
+      <view></view>
+      <text>测评介绍</text>
+    </view>
+    <text class="intro-text">测五脏主要通过常见表现进行综合判断，帮助您了解需要重点调养的脏腑方向，并给出饮食与生活调理建议。</text>
+    <view class="intro-grid">
+      <view class="intro-item" wx:for="{{introItems}}" wx:key="title">
+        <image src="{{item.icon}}" mode="aspectFit" />
+        <text>{{item.title}}</text>
+        <text>{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel notice-panel">
+    <view class="section-title">
+      <view></view>
+      <text>测评须知</text>
+    </view>
+    <view class="notice-card">
+      <view class="notice-row" wx:for="{{noticeRows}}" wx:key="label">
+        <text>{{item.label}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+    <text class="safe-note">该内容仅供参考，不构成医疗诊断/治疗建议，如有不适请及时前往正规医疗机构就诊。</text>
+  </view>
+
+  <view class="entry-card">
+    <view>
+      <text class="entry-title">开始五脏测评</text>
+      <text class="entry-desc">预计 2-3 分钟完成，结果将生成重点调养脏腑和建议。</text>
+    </view>
+    <image src="../../assets/images/icon-wuzang.png" mode="aspectFit" />
+  </view>
+
+  <button class="start-btn" bindtap="onStart">AI 测评</button>
+</view>

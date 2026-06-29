@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="nav"><view class="back" bindtap="onBack">‹</view><text>名医科普视频</text></view>
+  <view class="video-card">
+    <image src="../../assets/images/card-doctor.png" mode="aspectFill" />
+    <view class="video-control"><text>播放</text><text>全屏</text></view>
+  </view>
+  <view class="panel">
+    <view class="section-title"><view></view><text>{{title}}</text></view>
+    <text class="body-text">{{desc}}</text>
+  </view>
+  <view class="panel">
+    <view class="section-title"><view></view><text>医生专辑</text></view>
+    <text class="body-text">张仕永，副主任医师，擅长脑血管病介入诊疗及综合防治。本内容用于健康科普参考。</text>
+  </view>
+</view>
