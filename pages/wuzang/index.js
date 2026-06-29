@@ -1,14 +1,70 @@
+const echarts = require("../../components/ec-canvas/echarts")
+
+function initTrendChart(canvas, width, height, dpr) {
+  const chart = echarts.init(canvas, null, {
+    width,
+    height,
+    devicePixelRatio: dpr
+  })
+  canvas.setChart(chart)
+
+  chart.setOption({
+    grid: { left: 10, right: 10, top: 24, bottom: 28, containLabel: true },
+    legend: {
+      top: 0,
+      icon: "circle",
+      itemWidth: 8,
+      itemHeight: 8,
+      textStyle: { color: "#4b5563", fontSize: 10 },
+      data: ["心", "肝", "脾", "肺", "肾"]
+    },
+    xAxis: {
+      type: "category",
+      boundaryGap: false,
+      data: ["06/21", "06/22", "06/23", "06/24", "06/25", "06/26", "06/27"],
+      axisLine: { show: false },
+      axisTick: { show: false },
+      axisLabel: { color: "#8a9490", fontSize: 10 }
+    },
+    yAxis: {
+      type: "value",
+      min: 60,
+      max: 95,
+      splitNumber: 3,
+      axisLabel: { show: false },
+      axisLine: { show: false },
+      axisTick: { show: false },
+      splitLine: { lineStyle: { color: "#e8f0ec" } }
+    },
+    series: [
+      { name: "心", type: "line", smooth: true, symbol: "none", lineStyle: { width: 3, color: "#ff4d57" }, data: [79, 80, 81, 82, 81, 82, 83] },
+      { name: "肝", type: "line", smooth: true, symbol: "none", lineStyle: { width: 3, color: "#0aaf60" }, data: [82, 82, 83, 83, 84, 84, 85] },
+      { name: "脾", type: "line", smooth: true, symbol: "none", lineStyle: { width: 3, color: "#ff9f1c" }, data: [75, 76, 76, 77, 78, 78, 79] },
+      { name: "肺", type: "line", smooth: true, symbol: "none", lineStyle: { width: 3, color: "#12b8a6" }, data: [86, 85, 85, 84, 84, 83, 83] },
+      { name: "肾", type: "line", smooth: true, symbol: "none", lineStyle: { width: 3, color: "#2f80ed" }, data: [72, 73, 73, 74, 74, 75, 75] }
+    ]
+  })
+
+  return chart
+}
+
 Page({
   data: {
-    systems: ["心系统", "肝系统", "脾系统", "肺系统", "肾系统"],
+    ec: { onInit: initTrendChart },
+    organs: [
+      { name: "心", desc: "神志与血脉", score: 83, color: "red" },
+      { name: "肝", desc: "疏泄与情志", score: 85, color: "green" },
+      { name: "脾", desc: "运化与气血", score: 79, color: "orange" },
+      { name: "肺", desc: "呼吸与卫表", score: 83, color: "mint" },
+      { name: "肾", desc: "精气与腰膝", score: 75, color: "blue" }
+    ],
     ranges: [
       { label: "较差", value: "0-60", color: "#b91c1c" },
       { label: "一般", value: "60-70", color: "#f06d16" },
       { label: "较好", value: "70-80", color: "#f2cf24" },
       { label: "好", value: "80-90", color: "#70c84b", active: true },
-      { label: "很好", value: ">=90", color: "#0aaf60" }
+      { label: "很好", value: "≥90", color: "#0aaf60" }
     ],
-    advice: "您当前心系统的健康状态良好。建议继续保持每日午休片刻以养心神，夏季合理使用空调，保持午餐饮食清淡，可适当吃黑芝麻、小枣、莲子等。",
     tabs: [
       { key: "home", label: "首页", active: false },
       { key: "index", label: "五脏指数", active: true },
@@ -19,6 +75,10 @@ Page({
 
   onConstitutionTap() {
     wx.navigateTo({ url: "/pages/constitution-test/index" })
+  },
+
+  onWuzangTestTap() {
+    wx.navigateTo({ url: "/pages/wuzang-test/index" })
   },
 
   onTabTap(event) {

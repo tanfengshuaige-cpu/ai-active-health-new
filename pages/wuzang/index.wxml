@@ -1,33 +1,48 @@
 <view class="page">
-  <view class="nav-title">中医五脏指数</view>
-
-  <view class="intro-card">
-    <text class="intro-title">中医五脏指数</text>
-    <text class="intro-en">ZHONG YI WU ZANG ZHI SHU</text>
-    <text class="intro-desc">基于中医天人合一理论，结合五运六气、中医五脏理论与健康数据，分析心、肝、脾、肺、肾在不同时辰的运行状态，并给出参考建议。</text>
+  <view class="hero-card">
+    <view class="hero-copy">
+      <text class="eyebrow">中医五脏指数</text>
+      <text class="hero-title">今日五脏指数</text>
+      <view class="score-row">
+        <text class="score">82</text>
+        <text class="unit">分</text>
+        <text class="badge">整体平衡</text>
+      </view>
+      <text class="hero-desc">建议保持规律作息，关注肝肾调养，饮食清淡，适当进行舒缓运动。</text>
+    </view>
+    <image class="hero-art" src="../../assets/images/wuzang-orbit-key.png" mode="aspectFill" />
   </view>
 
-  <scroll-view class="system-scroll" scroll-x enhanced show-scrollbar="{{false}}">
-    <view class="system-tabs">
-      <text wx:for="{{systems}}" wx:key="*this" class="{{index === 0 ? 'active' : ''}}">{{item}}</text>
-    </view>
-  </scroll-view>
+  <view class="section-title">
+    <view></view>
+    <text>五脏状态</text>
+  </view>
 
-  <view class="chart-panel">
-    <view class="chart-head">
-      <text>今日趋势</text>
-      <text>近 24 小时</text>
+  <view class="organ-grid">
+    <view class="organ-card {{item.color}}" wx:for="{{organs}}" wx:key="name">
+      <view class="organ-mark"><text>{{item.name}}</text></view>
+      <view class="organ-copy">
+        <text>{{item.name}}系统</text>
+        <text>{{item.desc}}</text>
+      </view>
+      <text class="organ-score">{{item.score}}</text>
     </view>
-    <view class="chart-lines">
-      <view></view><view></view><view></view><view></view>
+  </view>
+
+  <view class="section-head">
+    <view class="section-title no-margin">
+      <view></view>
+      <text>五脏趋势</text>
     </view>
-    <view class="trend-line"></view>
-    <view class="dots">
-      <view wx:for="{{[1,2,3,4,5]}}" wx:key="*this"></view>
+    <view class="range-tabs">
+      <text class="active">近7天</text>
+      <text>近30天</text>
+      <text>近90天</text>
     </view>
-    <view class="x-labels">
-      <text>子时</text><text>卯时</text><text>午时</text><text>酉时</text><text>亥时</text>
-    </view>
+  </view>
+
+  <view class="chart-card">
+    <ec-canvas id="trend-chart" canvas-id="trend-chart" ec="{{ec}}"></ec-canvas>
   </view>
 
   <view class="range-card">
@@ -38,17 +53,20 @@
     </view>
   </view>
 
-  <view class="status-card">
-    <view class="section-title"><view></view><text>当前状态：好</text></view>
-    <text class="status-text">{{advice}}</text>
+  <view class="action-grid">
+    <view class="action-card" bindtap="onWuzangTestTap">
+      <text>中医测五脏</text>
+      <text>重新评估五脏状态</text>
+    </view>
+    <view class="action-card warm" bindtap="onConstitutionTap">
+      <text>中医测体质</text>
+      <text>辨析体质与调养方向</text>
+    </view>
   </view>
 
-  <view class="season-card" bindtap="onConstitutionTap">
-    <image src="../../assets/images/wuzang-orbit.png" mode="aspectFit" />
-    <view>
-      <text>中医测体质</text>
-      <text>结合近期状态辨析体质，查看饮食、起居、运动与调养建议。</text>
-    </view>
+  <view class="advice-card">
+    <view class="section-title no-margin"><view></view><text>今日建议</text></view>
+    <text>当前整体较平衡，肾系统略低。建议今晚提前入睡，减少久坐，晚餐清淡，可配合温和拉伸或八段锦。</text>
   </view>
 
   <view class="tabbar">
