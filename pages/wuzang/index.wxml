@@ -1,5 +1,7 @@
 <view class="page">
   <view class="hero-card">
+    <image class="hero-bg" src="../../assets/images/wuzang-hero-ai.png" mode="aspectFill" />
+    <view class="hero-shade"></view>
     <view class="hero-copy">
       <text class="eyebrow">中医五脏指数</text>
       <text class="hero-title">今日五脏指数</text>
@@ -9,9 +11,6 @@
         <text class="badge">整体平衡</text>
       </view>
       <text class="hero-desc">建议保持规律作息，关注肝肾调养，饮食清淡，适当进行舒缓运动。</text>
-    </view>
-    <view class="hero-art-wrap">
-      <image class="hero-art" src="../../assets/images/wuzang-orbit-key.png" mode="aspectFill" />
     </view>
   </view>
 

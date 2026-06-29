@@ -10,7 +10,7 @@ function initTrendChart(canvas, width, height, dpr) {
 
   chart.setOption({
     color: ["#ff4d57", "#0aaf60", "#ff9f1c", "#12b8a6", "#2f80ed"],
-    grid: { left: 8, right: 12, top: 54, bottom: 26, containLabel: true },
+    grid: { left: 6, right: 8, top: 58, bottom: 46, containLabel: true },
     legend: {
       top: 8,
       left: "center",
@@ -27,7 +27,7 @@ function initTrendChart(canvas, width, height, dpr) {
       data: ["06/21", "06/22", "06/23", "06/24", "06/25", "06/26", "06/27"],
       axisLine: { show: false },
       axisTick: { show: false },
-      axisLabel: { color: "#8a9490", fontSize: 10 }
+      axisLabel: { color: "#8a9490", fontSize: 10, margin: 14 }
     },
     yAxis: {
       type: "value",
@@ -40,11 +40,11 @@ function initTrendChart(canvas, width, height, dpr) {
       splitLine: { lineStyle: { color: "#e8f0ec", type: "dashed" } }
     },
     series: [
-      { name: "心", type: "line", smooth: 0.35, showSymbol: false, lineStyle: { width: 2.4 }, areaStyle: { opacity: 0.05 }, data: [79, 80, 81, 82, 81, 82, 83] },
-      { name: "肝", type: "line", smooth: 0.35, showSymbol: false, lineStyle: { width: 2.4 }, areaStyle: { opacity: 0.05 }, data: [82, 82, 83, 83, 84, 84, 85] },
-      { name: "脾", type: "line", smooth: 0.35, showSymbol: false, lineStyle: { width: 2.4 }, areaStyle: { opacity: 0.04 }, data: [75, 76, 76, 77, 78, 78, 79] },
-      { name: "肺", type: "line", smooth: 0.35, showSymbol: false, lineStyle: { width: 2.4 }, areaStyle: { opacity: 0.04 }, data: [86, 85, 85, 84, 84, 83, 83] },
-      { name: "肾", type: "line", smooth: 0.35, showSymbol: false, lineStyle: { width: 2.4 }, areaStyle: { opacity: 0.04 }, data: [72, 73, 73, 74, 74, 75, 75] }
+      { name: "心", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(255,77,87,.16)" }, data: [79, 80, 81, 82, 81, 82, 83] },
+      { name: "肝", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(10,175,96,.16)" }, data: [82, 82, 83, 83, 84, 84, 85] },
+      { name: "脾", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(255,159,28,.14)" }, data: [75, 76, 76, 77, 78, 78, 79] },
+      { name: "肺", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(18,184,166,.14)" }, data: [86, 85, 85, 84, 84, 83, 83] },
+      { name: "肾", type: "line", smooth: 0.45, showSymbol: false, lineStyle: { width: 3.2, shadowBlur: 4, shadowColor: "rgba(47,128,237,.14)" }, data: [72, 73, 73, 74, 74, 75, 75] }
     ]
   })
 
