@@ -51,20 +51,13 @@
       <text>+5</text>
     </view>
     <ec-canvas id="trend-chart" canvas-id="trend-chart" ec="{{ec}}"></ec-canvas>
-    <view class="score-scale">
-      <view class="scale-head">
-        <text>当前 82 分</text>
-        <text>处于「好」区间</text>
-      </view>
-      <view class="scale-track">
-        <view class="scale-pointer"></view>
-      </view>
-      <view class="scale-labels">
-        <view wx:for="{{ranges}}" wx:key="label" class="{{item.active ? 'active' : ''}}">
-          <text>{{item.label}}</text>
-          <text>{{item.value}}</text>
-        </view>
-      </view>
+  </view>
+
+  <view class="range-card">
+    <view class="range-item" wx:for="{{ranges}}" wx:key="label">
+      <view style="background: {{item.color}}"></view>
+      <text class="{{item.active ? 'active' : ''}}">{{item.label}}</text>
+      <text class="{{item.active ? 'active' : ''}}">{{item.value}}</text>
     </view>
   </view>
 

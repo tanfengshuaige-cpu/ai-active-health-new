@@ -224,7 +224,7 @@ text {
 }
 
 .chart-card {
-  min-height: 530rpx;
+  height: 430rpx;
   margin-top: 18rpx;
   margin-bottom: 32rpx;
   padding: 24rpx 18rpx 22rpx;
@@ -270,74 +270,40 @@ ec-canvas {
   height: 320rpx;
 }
 
-.score-scale {
-  margin-top: 6rpx;
-  padding: 18rpx 16rpx 14rpx;
-  border-radius: 20rpx;
-  background: #f7fbf9;
-}
-
-.scale-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.scale-head text:first-child {
-  color: #101817;
-  font-size: 26rpx;
-  font-weight: 900;
-}
-
-.scale-head text:last-child {
-  color: #0a8f68;
-  font-size: 24rpx;
-  font-weight: 900;
-}
-
-.scale-track {
-  position: relative;
-  height: 12rpx;
-  margin-top: 18rpx;
-  border-radius: 999rpx;
-  background: linear-gradient(90deg, #b91c1c 0 20%, #f06d16 20% 40%, #f2cf24 40% 60%, #70c84b 60% 80%, #0aaf60 80% 100%);
-}
-
-.scale-pointer {
-  position: absolute;
-  left: 72%;
-  top: 50%;
-  width: 22rpx;
-  height: 22rpx;
-  border: 5rpx solid #ffffff;
-  border-radius: 50%;
-  background: #0a8f68;
-  box-shadow: 0 6rpx 14rpx rgba(10, 143, 104, 0.24);
-  transform: translate(-50%, -50%);
-}
-
-.scale-labels {
+.range-card {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin-top: 14rpx;
+  gap: 10rpx;
+  margin-top: 18rpx;
+  padding: 18rpx;
+  border-radius: 26rpx;
+  background: #fff;
+  box-shadow: 0 12rpx 28rpx rgba(27, 84, 63, 0.05);
+}
+
+.range-item {
   text-align: center;
 }
 
-.scale-labels view text:first-child {
-  color: #4b5563;
-  font-size: 22rpx;
-  line-height: 28rpx;
+.range-item view {
+  height: 10rpx;
+  border-radius: 999rpx;
 }
 
-.scale-labels view text:last-child {
-  margin-top: 2rpx;
-  color: #8a9490;
-  font-size: 19rpx;
-  line-height: 24rpx;
+.range-item text:nth-child(2) {
+  margin-top: 12rpx;
+  color: #40504c;
+  font-size: 24rpx;
 }
 
-.scale-labels view.active text {
-  color: #0a8f68;
+.range-item text:nth-child(3) {
+  margin-top: 6rpx;
+  color: #40504c;
+  font-size: 21rpx;
+}
+
+.range-item .active {
+  color: #0a8f68 !important;
   font-weight: 900;
 }
 
