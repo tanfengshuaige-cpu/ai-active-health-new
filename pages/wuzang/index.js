@@ -10,7 +10,7 @@ function initTrendChart(canvas, width, height, dpr) {
 
   chart.setOption({
     color: ["#0a8f68"],
-    grid: { left: 8, right: 14, top: 18, bottom: 34, containLabel: true },
+    grid: { left: 4, right: 14, top: 18, bottom: 34, containLabel: true },
     xAxis: {
       type: "category",
       boundaryGap: false,
@@ -21,10 +21,16 @@ function initTrendChart(canvas, width, height, dpr) {
     },
     yAxis: {
       type: "value",
-      min: 74,
-      max: 86,
-      splitNumber: 3,
-      axisLabel: { show: false },
+      min: 70,
+      max: 90,
+      interval: 5,
+      axisLabel: {
+        show: true,
+        color: "#8a9490",
+        fontSize: 10,
+        margin: 8,
+        formatter: "{value}"
+      },
       axisLine: { show: false },
       axisTick: { show: false },
       splitLine: { lineStyle: { color: "#e8f0ec", type: "dashed" } }
