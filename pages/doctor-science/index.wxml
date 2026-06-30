@@ -14,7 +14,7 @@
     <text class="doctor-title">血管神经外科主任-张仕永专辑</text>
     <view class="doctor-intro">
       <text>张仕永，副主任医师，擅长脑血管病介入诊疗及综合防治。北京中医医院独家健康科普内容。</text>
-      <image src="../../assets/images/card-doctor-lite.jpg" mode="aspectFill"/>
+      <image src="../../assets/images/card-doctor.png" mode="aspectFill"/>
     </view>
     <text class="list-title">科普视频列表：</text>
     <view class="video-row" wx:for="{{videos}}" wx:key="*this" bindtap="onPlay" data-title="{{item}}"><view></view><text>{{item}}</text></view>

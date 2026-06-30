@@ -67,7 +67,7 @@
           <text class="recipe-text">{{item.text}}</text>
         </view>
       </view>
-      <image src="../../assets/images/card-soup-lite.jpg" mode="aspectFill" />
+      <image src="../../assets/images/card-soup.png" mode="aspectFill" />
     </view>
   </view>
 

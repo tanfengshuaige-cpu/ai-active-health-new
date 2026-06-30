@@ -14,8 +14,8 @@ Page({
         { title: "舌象分析", result: "湿气偏重倾向", desc: "建议清淡饮食，减少甜腻。", time: "2026-06-08 18:16", icon: "../../assets/images/icon-tongue.png", url: "/pages/tongue-result/index" }
       ],
       constitution: [
-        { title: "中医测体质", result: "血瘀质", desc: "建议活血行气，保持适度运动。", time: "2026-06-09 11:02", icon: "../../assets/images/wuzang-orbit-lite.jpg", url: "/pages/constitution-result/index" },
-        { title: "中医测体质", result: "平和质", desc: "整体状态较稳定，继续保持规律作息。", time: "2026-06-06 09:40", icon: "../../assets/images/wuzang-orbit-lite.jpg", url: "/pages/constitution-result/index" }
+        { title: "中医测体质", result: "血瘀质", desc: "建议活血行气，保持适度运动。", time: "2026-06-09 11:02", icon: "../../assets/images/wuzang-orbit.png", url: "/pages/constitution-result/index" },
+        { title: "中医测体质", result: "平和质", desc: "整体状态较稳定，继续保持规律作息。", time: "2026-06-06 09:40", icon: "../../assets/images/wuzang-orbit.png", url: "/pages/constitution-result/index" }
       ],
       ai: [
         { title: "中医问询", result: "心肝血虚", desc: "已生成饮食、作息与情绪调养建议。", time: "2026-06-09 14:20", icon: "../../assets/images/icon-ai-chat.png", url: "/pages/ai-result/index" },

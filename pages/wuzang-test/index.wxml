@@ -5,7 +5,7 @@
   </view>
 
   <view class="hero-card">
-    <image class="hero-art" src="../../assets/images/banner-person-lite.jpg" mode="aspectFill" />
+    <image class="hero-art" src="../../assets/images/banner-person.png" mode="aspectFill" />
     <view class="hero-copy">
       <text class="hero-kicker">AI 五脏评估</text>
       <text class="hero-title">测五脏，识体质</text>

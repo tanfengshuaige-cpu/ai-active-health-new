@@ -10,7 +10,7 @@
       <text class="hero-title">主体现象：气虚体质</text>
       <text class="hero-desc">舌苔偏黄、舌质偏红，结合表现提示体内有湿热与虚弱倾向。</text>
     </view>
-    <image class="hero-art" src="../../assets/images/feature-tongue-lite.jpg" mode="aspectFit" />
+    <image class="hero-art" src="../../assets/images/feature-tongue.png" mode="aspectFit" />
   </view>
 
   <view class="panel">
@@ -99,7 +99,7 @@
         <text class="diet-title">黄芪童子鸡</text>
         <text class="diet-desc">益气健脾，适用于气虚质调养。可搭配山药粥、黄芪茶等温和食养。</text>
       </view>
-      <image src="../../assets/images/card-soup-lite.jpg" mode="aspectFill" />
+      <image src="../../assets/images/card-soup.png" mode="aspectFill" />
     </view>
   </view>
 

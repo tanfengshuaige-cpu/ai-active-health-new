@@ -5,7 +5,7 @@
   </view>
 
   <view class="hero-card">
-    <image class="hero-art" src="../../assets/images/feature-handwriting-lite.jpg" mode="aspectFit" />
+    <image class="hero-art" src="../../assets/images/feature-handwriting.png" mode="aspectFit" />
     <view class="hero-copy">
       <text class="hero-kicker">AI 笔迹分析</text>
       <text class="hero-title">看见书写里的状态</text>

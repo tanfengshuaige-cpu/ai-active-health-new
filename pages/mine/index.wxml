@@ -1,6 +1,6 @@
 <view class="page">
   <view class="header-card">
-    <image class="header-bg" src="../../assets/images/mine-header-lite.jpg" mode="aspectFill" />
+    <image class="header-bg" src="../../assets/images/mine-header.png" mode="aspectFill" />
     <view class="header-mask"></view>
     <view class="profile">
       <view class="avatar"><image src="../../assets/images/data-user.png" mode="aspectFit" /></view>

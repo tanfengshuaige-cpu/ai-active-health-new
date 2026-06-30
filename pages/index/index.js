@@ -43,7 +43,7 @@ Page({
     adviceCards: [
       {
         key: "soup",
-        image: "../../assets/images/card-soup-lite.jpg",
+        image: "../../assets/images/card-soup.png",
         title: "节气养生汤",
         tags: ["顺时养生", "温和调理"],
         desc: "应时而养，为身体充电",
@@ -51,7 +51,7 @@ Page({
       },
       {
         key: "doctor",
-        image: "../../assets/images/card-doctor-lite.jpg",
+        image: "../../assets/images/card-doctor.png",
         title: "名医科普",
         tags: ["权威专家", "健康知识"],
         desc: "专业解读常见健康问题，科学守护健康",

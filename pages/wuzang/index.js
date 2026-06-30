@@ -1,24 +1,82 @@
+const echarts = require("../../components/ec-canvas/echarts")
+
+function initTrendChart(canvas, width, height, dpr) {
+  const chart = echarts.init(canvas, null, {
+    width,
+    height,
+    devicePixelRatio: dpr
+  })
+  canvas.setChart(chart)
+
+  chart.setOption({
+    color: ["#0a8f68"],
+    grid: { left: 4, right: 14, top: 18, bottom: 34, containLabel: true },
+    xAxis: {
+      type: "category",
+      boundaryGap: false,
+      data: ["06/21", "06/22", "06/23", "06/24", "06/25", "06/26", "06/27"],
+      axisLine: { show: false },
+      axisTick: { show: false },
+      axisLabel: { color: "#8a9490", fontSize: 10, margin: 14 }
+    },
+    yAxis: {
+      type: "value",
+      min: 70,
+      max: 90,
+      interval: 5,
+      axisLabel: {
+        show: true,
+        color: "#8a9490",
+        fontSize: 10,
+        margin: 8,
+        formatter: "{value}"
+      },
+      axisLine: { show: false },
+      axisTick: { show: false },
+      splitLine: { lineStyle: { color: "#e8f0ec", type: "dashed" } }
+    },
+    series: [
+      {
+        name: "综合指数",
+        type: "line",
+        smooth: 0.45,
+        symbol: "circle",
+        symbolSize: 7,
+        lineStyle: {
+          width: 4,
+          color: "#0a8f68",
+          shadowBlur: 8,
+          shadowColor: "rgba(10,143,104,.2)"
+        },
+        itemStyle: {
+          color: "#ffffff",
+          borderColor: "#0a8f68",
+          borderWidth: 3
+        },
+        areaStyle: {
+          color: {
+            type: "linear",
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [
+              { offset: 0, color: "rgba(10,143,104,.22)" },
+              { offset: 1, color: "rgba(10,143,104,0)" }
+            ]
+          }
+        },
+        data: [78, 79, 80, 81, 80, 82, 83]
+      }
+    ]
+  })
+
+  return chart
+}
+
 Page({
   data: {
-    chartGrid: [0, 25, 50, 75, 100],
-    chartDates: ["6/21", "6/22", "6/23", "6/24", "6/25", "6/26", "6/27"],
-    trendPoints: [
-      { left: 0, top: 75 },
-      { left: 16.6, top: 67.5 },
-      { left: 33.2, top: 60 },
-      { left: 49.8, top: 52.5 },
-      { left: 66.4, top: 60 },
-      { left: 83, top: 37.5 },
-      { left: 99.6, top: 30 }
-    ],
-    trendSegments: [
-      { left: 0, top: 72.8, width: 17.7, rotate: -14 },
-      { left: 16.6, top: 65.3, width: 17.7, rotate: -14 },
-      { left: 33.2, top: 57.8, width: 17.7, rotate: -14 },
-      { left: 49.8, top: 55.2, width: 17.7, rotate: 14 },
-      { left: 66.4, top: 51.2, width: 18.1, rotate: -37 },
-      { left: 83, top: 35.3, width: 17.7, rotate: -14 }
-    ],
+    ec: { onInit: initTrendChart },
     organs: [
       { name: "心", desc: "神志与血脉", score: 83, color: "red" },
       { name: "肝", desc: "疏泄与情志", score: 85, color: "green" },
