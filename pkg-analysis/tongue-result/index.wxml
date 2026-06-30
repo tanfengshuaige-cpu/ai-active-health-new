@@ -1,0 +1,111 @@
+<view class="page">
+  <view class="nav">
+    <view class="back" bindtap="onBack">‹</view>
+    <text>舌象测评结果</text>
+  </view>
+
+  <view class="hero-card">
+    <view class="hero-copy">
+      <text class="hero-kicker">AI 识别完成</text>
+      <text class="hero-title">主体现象：气虚体质</text>
+      <text class="hero-desc">舌苔偏黄、舌质偏红，结合表现提示体内有湿热与虚弱倾向。</text>
+    </view>
+    <image class="hero-art" src="/pkg-analysis/assets/images/feature-tongue.png" mode="aspectFit" />
+  </view>
+
+  <view class="panel">
+    <view class="section-title">
+      <view></view>
+      <text>舌苔分析</text>
+    </view>
+    <text class="section-sub">数值越大，表示检测结果确定性越高</text>
+
+    <view class="radar-card">
+      <view class="radar">
+        <view class="ring ring-1"></view>
+        <view class="ring ring-2"></view>
+        <view class="ring ring-3"></view>
+        <view class="axis axis-1"></view>
+        <view class="axis axis-2"></view>
+        <view class="axis axis-3"></view>
+        <view class="axis axis-4"></view>
+        <view class="axis axis-5"></view>
+        <view class="axis axis-6"></view>
+        <view class="radar-fill"></view>
+        <text class="label label-1">黄苔</text>
+        <text class="label label-2">薄苔</text>
+        <text class="label label-3">有齿痕</text>
+        <text class="label label-4">有点刺</text>
+        <text class="label label-5">腻苔</text>
+        <text class="label label-6">红绛舌</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">
+      <view></view>
+      <text>检测结果</text>
+    </view>
+    <view class="result-table">
+      <view class="table-head">
+        <text>检测结果</text>
+        <text>意义</text>
+      </view>
+      <view class="table-row" wx:for="{{tongueRows}}" wx:key="name">
+        <text>{{item.name}}</text>
+        <text class="{{item.warn ? 'warn' : ''}}">{{item.meaning}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">
+      <view></view>
+      <text>体质分析</text>
+    </view>
+    <view class="constitution-card">
+      <text class="constitution-title">主本质：气虚体质</text>
+      <text class="constitution-text">平素语音低弱、气短懒言，容易疲乏，精神不振，常自汗出。调理宜补气健脾、养元固本。</text>
+      <view class="constitution-tags">
+        <text>易疲惫</text>
+        <text>气短</text>
+        <text>自汗</text>
+        <text>抵抗力弱</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel advice-panel">
+    <view class="section-title">
+      <view></view>
+      <text>调养建议</text>
+    </view>
+    <view class="advice-list">
+      <view class="advice-row" wx:for="{{advice}}" wx:key="title">
+        <text class="advice-title">{{item.title}}</text>
+        <text class="advice-text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel diet-panel">
+    <view class="section-title">
+      <view></view>
+      <text>食养</text>
+    </view>
+    <view class="diet-card">
+      <view>
+        <text class="diet-title">黄芪童子鸡</text>
+        <text class="diet-desc">益气健脾，适用于气虚质调养。可搭配山药粥、黄芪茶等温和食养。</text>
+      </view>
+      <image src="/assets/images/card-soup.png" mode="aspectFill" />
+    </view>
+  </view>
+
+  <view class="notice">
+    <text>该内容仅供参考，不构成医疗诊断/治疗建议，如有不适请及时前往正规医疗机构就诊。</text>
+  </view>
+
+  <button class="bottom-btn" bindtap="goList">返回测评列表</button>
+</view>

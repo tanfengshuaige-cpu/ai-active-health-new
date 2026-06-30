@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "ec-canvas": "/pkg-wuzang/components/ec-canvas/ec-canvas"
+  }
+}

@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="nav"><view class="back" bindtap="onBack">‹</view><text>名医科普</text></view>
+  <view class="scroll-card">
+    <text class="page-title">北京中医医院独家视频</text>
+    <view class="week-grid">
+      <view class="week-card" wx:for="{{week}}" wx:key="day" bindtap="onPlay" data-title="{{item.title}}">
+        <text class="day">{{item.day}}</text>
+        <text class="lesson">{{item.title}}</text>
+        <image src="/assets/images/{{item.icon}}" mode="aspectFit"/>
+      </view>
+    </view>
+  </view>
+  <view class="doctor-card">
+    <text class="doctor-title">血管神经外科主任-张仕永专辑</text>
+    <view class="doctor-intro">
+      <text>张仕永，副主任医师，擅长脑血管病介入诊疗及综合防治。北京中医医院独家健康科普内容。</text>
+      <image src="/assets/images/card-doctor.png" mode="aspectFill"/>
+    </view>
+    <text class="list-title">科普视频列表：</text>
+    <view class="video-row" wx:for="{{videos}}" wx:key="*this" bindtap="onPlay" data-title="{{item}}"><view></view><text>{{item}}</text></view>
+  </view>
+</view>

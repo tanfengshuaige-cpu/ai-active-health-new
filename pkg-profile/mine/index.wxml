@@ -1,0 +1,39 @@
+<view class="page">
+  <view class="header-card">
+    <image class="header-bg" src="/pkg-profile/assets/images/mine-header.png" mode="aspectFill" />
+    <view class="header-mask"></view>
+    <view class="profile">
+      <view class="avatar"><image src="/assets/images/data-user.png" mode="aspectFit" /></view>
+      <view>
+        <text class="user-name">主动健康用户</text>
+        <text class="user-desc">欢迎加入会员，享受 AI 健康服务</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title"><view></view><text>我的服务</text></view>
+    <view class="menu-card">
+      <view class="menu-row" wx:for="{{menus}}" wx:key="key">
+        <view class="menu-icon-wrap"><image src="{{item.icon}}" mode="aspectFit" /></view>
+        <view class="menu-copy">
+          <text>{{item.title}}</text>
+          <text>{{item.desc}}</text>
+        </view>
+        <text class="menu-arrow">›</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="brand-footer">
+    <text>AI+</text>
+    <text>中医AI主动健康</text>
+  </view>
+
+  <view class="tabbar">
+    <view class="tab {{item.key}} {{item.active ? 'active' : ''}}" wx:for="{{tabs}}" wx:key="key" bindtap="onTabTap" data-key="{{item.key}}">
+      <view class="tab-icon"></view>
+      <text>{{item.label}}</text>
+    </view>
+  </view>
+</view>

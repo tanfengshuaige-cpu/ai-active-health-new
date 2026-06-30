@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="topbar"><text bindtap="onBack">‹</text><text>中医测体质</text></view>
+
+  <view class="hero-card">
+    <view class="hero-copy">
+      <text class="eyebrow">AI 体质辨析</text>
+      <text class="hero-title">测体质，懂调养</text>
+      <text class="hero-desc">通过情绪、睡眠、出汗、饮食等日常状态，评估体质偏颇情况，生成调养建议。</text>
+      <button bindtap="onStart">开始测评</button>
+    </view>
+    <image src="/pkg-wuzang/assets/images/wuzang-orbit.png" mode="aspectFit" />
+  </view>
+
+  <view class="section">
+    <view class="section-title"><view></view><text>测评介绍</text></view>
+    <text class="body-text">体质测评可帮助您了解一段时期内自身的体质状态。完成答题后，系统会从饮食、生活起居、精神、运动等方面给出调养参考。</text>
+  </view>
+
+  <view class="notice-card">
+    <view class="notice-row" wx:for="{{notices}}" wx:key="label">
+      <text>{{item.label}}</text>
+      <text>{{item.value}}</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title"><view></view><text>测评维度</text></view>
+    <view class="tag-grid">
+      <text wx:for="{{tags}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+</view>

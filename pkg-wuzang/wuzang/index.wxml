@@ -1,0 +1,86 @@
+<view class="page">
+  <view class="hero-card">
+    <image class="hero-bg" src="/pkg-wuzang/assets/images/wuzang-hero-ai.png" mode="aspectFill" />
+    <view class="hero-shade"></view>
+    <view class="hero-copy">
+      <text class="eyebrow">中医五脏指数</text>
+      <text class="hero-title">今日五脏指数</text>
+      <view class="score-row">
+        <text class="score">82</text>
+        <text class="unit">分</text>
+        <text class="badge">整体平衡</text>
+      </view>
+      <text class="hero-desc">建议保持规律作息，关注肝肾调养，饮食清淡，适当进行舒缓运动。</text>
+    </view>
+  </view>
+
+  <view class="section-title">
+    <view></view>
+    <text>五脏状态</text>
+  </view>
+
+  <view class="organ-grid">
+    <view class="organ-card {{item.color}}" wx:for="{{organs}}" wx:key="name">
+      <view class="organ-mark"><text>{{item.name}}</text></view>
+      <view class="organ-copy">
+        <text>{{item.name}}系统</text>
+        <text>{{item.desc}}</text>
+      </view>
+      <text class="organ-score">{{item.score}}</text>
+    </view>
+  </view>
+
+  <view class="section-head">
+    <view class="section-title no-margin">
+      <view></view>
+      <text>五脏趋势</text>
+    </view>
+    <view class="range-tabs">
+      <text class="active">近7天</text>
+      <text>近30天</text>
+      <text>近90天</text>
+    </view>
+  </view>
+
+  <view class="chart-card">
+    <view class="chart-summary">
+      <view>
+        <text>综合指数走势</text>
+        <text>近 7 天稳中有升</text>
+      </view>
+      <text>+5</text>
+    </view>
+    <ec-canvas id="trend-chart" canvas-id="trend-chart" ec="{{ec}}" force-use-old-canvas="{{true}}"></ec-canvas>
+  </view>
+
+  <view class="range-card">
+    <view class="range-item" wx:for="{{ranges}}" wx:key="label">
+      <view style="background: {{item.color}}"></view>
+      <text class="{{item.active ? 'active' : ''}}">{{item.label}}</text>
+      <text class="{{item.active ? 'active' : ''}}">{{item.value}}</text>
+    </view>
+  </view>
+
+  <view class="action-grid">
+    <view class="action-card" bindtap="onWuzangTestTap">
+      <text>中医测五脏</text>
+      <text>重新评估五脏状态</text>
+    </view>
+    <view class="action-card warm" bindtap="onConstitutionTap">
+      <text>中医测体质</text>
+      <text>辨析体质与调养方向</text>
+    </view>
+  </view>
+
+  <view class="advice-card">
+    <view class="section-title no-margin"><view></view><text>今日建议</text></view>
+    <text>当前整体较平衡，肾系统略低。建议今晚提前入睡，减少久坐，晚餐清淡，可配合温和拉伸或八段锦。</text>
+  </view>
+
+  <view class="tabbar">
+    <view class="tab {{item.key}} {{item.active ? 'active' : ''}}" wx:for="{{tabs}}" wx:key="key" bindtap="onTabTap" data-key="{{item.key}}">
+      <view class="tab-icon"></view>
+      <text>{{item.label}}</text>
+    </view>
+  </view>
+</view>

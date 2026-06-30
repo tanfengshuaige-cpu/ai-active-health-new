@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="nav"><view class="back" bindtap="onBack">‹</view><text>节气养生汤</text></view>
+  <view class="hero-image"><image src="/assets/images/card-soup.png" mode="aspectFill"/><view><text>节气养生药膳</text><text>顺应节气，温和调理，为身体充电</text></view></view>
+  <view class="scroll-card" wx:for="{{sections}}" wx:key="title">
+    <text class="scroll-title">{{item.title}}</text>
+    <text class="scroll-desc">{{item.desc}}</text>
+    <view class="video-title">{{item.video}}</view>
+    <view class="video-box" bindtap="onPlay" data-title="{{item.video}}">
+      <image src="/assets/images/card-soup.png" mode="aspectFill"/>
+      <view class="play">播放</view>
+      <view class="full">全屏</view>
+    </view>
+  </view>
+</view>

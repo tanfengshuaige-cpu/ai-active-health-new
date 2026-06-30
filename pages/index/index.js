@@ -83,68 +83,68 @@ Page({
   },
 
   onStartAssess() {
-    wx.navigateTo({ url: "/pages/ai/index" })
+    wx.navigateTo({ url: "/pkg-ai/ai/index" })
   },
 
   onInputHealth() {
-    wx.navigateTo({ url: `/pages/health-metric/index?type=${key}` })
+    wx.navigateTo({ url: `/pkg-profile/health-metric/index?type=${key}` })
   },
 
   onMetricTap(event) {
     const key = event.currentTarget.dataset.key
     if (key === "user") {
-      wx.navigateTo({ url: "/pages/profile-form/index" })
+      wx.navigateTo({ url: "/pkg-profile/profile-form/index" })
       return
     }
-    wx.navigateTo({ url: "/pages/health-input/index" })
+    wx.navigateTo({ url: "/pkg-profile/health-input/index" })
   },
 
   onAdviceTap(event) {
     const key = event.currentTarget.dataset.key
     if (key === "soup") {
-      wx.navigateTo({ url: "/pages/soup-detail/index" })
+      wx.navigateTo({ url: "/pkg-content/soup-detail/index" })
     }
     if (key === "doctor") {
-      wx.navigateTo({ url: "/pages/doctor-science/index" })
+      wx.navigateTo({ url: "/pkg-content/doctor-science/index" })
     }
   },
 
   onRecommendTap(event) {
     const key = event.currentTarget.dataset.key
     if (key === "test") {
-      wx.navigateTo({ url: "/pages/fun-test/index" })
+      wx.navigateTo({ url: "/pkg-content/fun-test/index" })
     }
     if (key === "report") {
-      wx.navigateTo({ url: "/pages/health-report/index" })
+      wx.navigateTo({ url: "/pkg-profile/health-report/index" })
     }
   },
 
   onFeatureTap(event) {
     const key = event.currentTarget.dataset.key
     if (key === "ai") {
-      wx.navigateTo({ url: "/pages/ai/index" })
+      wx.navigateTo({ url: "/pkg-ai/ai/index" })
     }
     if (key === "wuzang") {
-      wx.navigateTo({ url: "/pages/wuzang-test/index" })
+      wx.navigateTo({ url: "/pkg-wuzang/wuzang-test/index" })
     }
     if (key === "tongue") {
-      wx.navigateTo({ url: "/pages/tongue/index" })
+      wx.navigateTo({ url: "/pkg-analysis/tongue/index" })
     }
     if (key === "handwriting") {
-      wx.navigateTo({ url: "/pages/handwriting/index" })
+      wx.navigateTo({ url: "/pkg-analysis/handwriting/index" })
     }
   },
 
   onTabTap(event) {
     const key = event.currentTarget.dataset.key
     if (key === "index") {
-      wx.redirectTo({ url: "/pages/wuzang/index" })
+      wx.redirectTo({ url: "/pkg-wuzang/wuzang/index" })
     }
     if (key === "record") {
-      wx.redirectTo({ url: "/pages/record/index" })
+      wx.redirectTo({ url: "/pkg-profile/record/index" })
     }
     if (key === "mine") {
-      wx.redirectTo({ url: "/pages/mine/index" })
+      wx.redirectTo({ url: "/pkg-profile/mine/index" })
     }
   }
 })

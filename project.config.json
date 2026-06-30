@@ -1,7 +1,84 @@
 {
   "description": "AI+ 主动健康新UI小程序",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      {
+        "type": "file",
+        "value": "assets/images/banner-full-clean.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/banner-full.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/banner-health.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/card-report-clean.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/card-report.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/card-test-clean.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/card-test.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/feature-ai-chat.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/feature-wuzang.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/home-neo-tcm-final.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/icon-blood-fat.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/icon-blood-oxygen.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/icon-blood-pressure.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/icon-blood-sugar.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/icon-habit.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/icon-heart.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/icon-user.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/icon-weight.png"
+      },
+      {
+        "type": "file",
+        "value": "assets/images/wuzang-orbit-key.png"
+      }
+    ],
     "include": []
   },
   "setting": {

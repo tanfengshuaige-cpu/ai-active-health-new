@@ -1,0 +1,61 @@
+<view class="page">
+  <view class="nav">
+    <view class="back" bindtap="onBack">‹</view>
+    <text>笔迹分析</text>
+  </view>
+
+  <view class="hero-card">
+    <image class="hero-art" src="/pkg-analysis/assets/images/feature-handwriting.png" mode="aspectFit" />
+    <view class="hero-copy">
+      <text class="hero-kicker">AI 笔迹分析</text>
+      <text class="hero-title">看见书写里的状态</text>
+      <text class="hero-desc">通过字形、笔压、行距和书写节奏，辅助了解近期情绪与身心状态。</text>
+    </view>
+  </view>
+
+  <view class="panel upload-panel">
+    <view class="section-title">
+      <view></view>
+      <text>上传笔迹</text>
+    </view>
+    <view class="paper-card">
+      <view class="paper-lines">
+        <view></view>
+        <view></view>
+        <view></view>
+      </view>
+      <image src="/assets/images/icon-handwriting.png" mode="aspectFit" />
+      <text>请拍摄一张清晰的手写文字</text>
+    </view>
+    <button class="start-btn" bindtap="onStartAnalyze">开始分析</button>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">
+      <view></view>
+      <text>分析维度</text>
+    </view>
+    <view class="sample-grid">
+      <view class="sample-item" wx:for="{{samples}}" wx:key="label">
+        <text>{{item.label}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">
+      <view></view>
+      <text>拍摄注意事项</text>
+    </view>
+    <view class="tips">
+      <view class="tip-row" wx:for="{{tips}}" wx:key="title">
+        <text class="tip-index">{{index + 1}}</text>
+        <view>
+          <text class="tip-title">{{item.title}}</text>
+          <text class="tip-desc">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
