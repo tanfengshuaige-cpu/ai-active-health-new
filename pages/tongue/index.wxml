@@ -10,7 +10,7 @@
       <text class="hero-title">拍摄舌象，洞察体质</text>
       <text class="hero-desc">请将舌面放入取景框内，保持光线充足，尽量露出完整舌根。</text>
     </view>
-    <image class="hero-art" src="../../assets/images/feature-tongue.png" mode="aspectFit" />
+    <image class="hero-art" src="../../assets/images/feature-tongue-lite.jpg" mode="aspectFit" />
   </view>
 
   <view class="capture-card">

@@ -10,7 +10,7 @@
       <text class="hero-title">把今日状态记下来</text>
       <text class="hero-desc">补充心率、血压、血糖与生活习惯，生成更贴近个人的健康建议。</text>
     </view>
-    <image class="hero-art" src="../../assets/images/chart-health.png" mode="aspectFit" />
+    <image class="hero-art" src="../../assets/images/chart-health-lite.jpg" mode="aspectFit" />
   </view>
 
   <scroll-view class="metric-tabs" scroll-x enhanced show-scrollbar="{{false}}">

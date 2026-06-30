@@ -11,7 +11,7 @@
       <text class="hero-desc">结合体质、健康数据与中医调养知识，生成更适合日常参考的建议。</text>
       <button class="hero-btn" bindtap="goResult">开始问询</button>
     </view>
-    <image class="hero-art" src="../../assets/images/ai-consult-hero.png" mode="aspectFill" />
+    <image class="hero-art" src="../../assets/images/ai-consult-hero-lite.jpg" mode="aspectFill" />
   </view>
 
   <view class="intro-card">

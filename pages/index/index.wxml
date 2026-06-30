@@ -11,7 +11,7 @@
   </view>
 
   <view class="hero">
-    <image class="hero-art" src="../../assets/images/banner-person.png" mode="aspectFit" />
+    <image class="hero-art" src="../../assets/images/banner-person-lite.jpg" mode="aspectFit" />
     <view class="hero-mask"></view>
     <view class="hero-copy">
       <text class="hero-title">主动健康，</text>

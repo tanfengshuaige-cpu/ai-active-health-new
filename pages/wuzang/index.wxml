@@ -1,6 +1,6 @@
 <view class="page">
   <view class="hero-card">
-    <image class="hero-bg" src="../../assets/images/wuzang-hero-ai.png" mode="aspectFill" />
+    <image class="hero-bg" src="../../assets/images/wuzang-hero-ai-lite.jpg" mode="aspectFill" />
     <view class="hero-shade"></view>
     <view class="hero-copy">
       <text class="eyebrow">中医五脏指数</text>
@@ -50,7 +50,24 @@
       </view>
       <text>+5</text>
     </view>
-    <ec-canvas id="trend-chart" canvas-id="trend-chart" ec="{{ec}}" force-use-old-canvas="{{true}}"></ec-canvas>
+    <view class="mini-chart">
+      <view class="y-labels">
+        <text>90</text>
+        <text>85</text>
+        <text>80</text>
+        <text>75</text>
+        <text>70</text>
+      </view>
+      <view class="chart-plot">
+        <view class="grid-line" wx:for="{{chartGrid}}" wx:key="*this" style="top: {{item}}%;"></view>
+        <view class="area-fill"></view>
+        <view class="trend-segment" wx:for="{{trendSegments}}" wx:key="index" style="left: {{item.left}}%; top: {{item.top}}%; width: {{item.width}}%; transform: rotate({{item.rotate}}deg);"></view>
+        <view class="trend-dot" wx:for="{{trendPoints}}" wx:key="index" style="left: {{item.left}}%; top: {{item.top}}%;"></view>
+        <view class="x-labels">
+          <text wx:for="{{chartDates}}" wx:key="*this">{{item}}</text>
+        </view>
+      </view>
+    </view>
   </view>
 
   <view class="range-card">

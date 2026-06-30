@@ -12,7 +12,7 @@
       <text class="summary-desc">根据您的症状分析，AI 测评参考结果如下。</text>
     </view>
     <view class="summary-art">
-      <image src="../../assets/images/ai-consult-hero.png" mode="aspectFill" />
+      <image src="../../assets/images/ai-consult-hero-lite.jpg" mode="aspectFill" />
     </view>
   </view>
 

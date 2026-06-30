@@ -8,7 +8,7 @@
       <text class="hero-desc">通过情绪、睡眠、出汗、饮食等日常状态，评估体质偏颇情况，生成调养建议。</text>
       <button bindtap="onStart">开始测评</button>
     </view>
-    <image src="../../assets/images/wuzang-orbit.png" mode="aspectFit" />
+    <image src="../../assets/images/wuzang-orbit-lite.jpg" mode="aspectFit" />
   </view>
 
   <view class="section">

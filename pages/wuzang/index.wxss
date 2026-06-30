@@ -265,10 +265,77 @@ text {
   font-weight: 900;
 }
 
-ec-canvas {
-  display: block;
-  width: 100%;
+.mini-chart {
   height: 320rpx;
+  display: flex;
+  padding: 14rpx 0 0;
+}
+
+.y-labels {
+  width: 52rpx;
+  height: 250rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #8a9490;
+  font-size: 20rpx;
+  line-height: 24rpx;
+}
+
+.chart-plot {
+  position: relative;
+  flex: 1;
+  height: 250rpx;
+  margin-right: 6rpx;
+}
+
+.grid-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1rpx;
+  border-top: 1rpx dashed #e8f0ec;
+}
+
+.area-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 46%;
+  background: linear-gradient(180deg, rgba(10, 143, 104, 0.15), rgba(10, 143, 104, 0));
+}
+
+.trend-segment {
+  position: absolute;
+  height: 8rpx;
+  margin-top: -4rpx;
+  border-radius: 999rpx;
+  background: #0a8f68;
+  transform-origin: left center;
+  box-shadow: 0 4rpx 10rpx rgba(10, 143, 104, 0.16);
+}
+
+.trend-dot {
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: -10rpx;
+  margin-top: -10rpx;
+  border: 6rpx solid #0a8f68;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.x-labels {
+  position: absolute;
+  left: -10rpx;
+  right: -12rpx;
+  bottom: -44rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #8a9490;
+  font-size: 22rpx;
 }
 
 .range-card {

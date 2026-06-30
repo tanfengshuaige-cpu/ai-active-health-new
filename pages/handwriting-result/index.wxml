@@ -5,7 +5,7 @@
   </view>
 
   <view class="summary-card">
-    <image class="summary-art" src="../../assets/images/feature-handwriting.png" mode="aspectFit" />
+    <image class="summary-art" src="../../assets/images/feature-handwriting-lite.jpg" mode="aspectFit" />
     <view class="summary-copy">
       <text class="kicker">AI 分析完成</text>
       <text class="summary-title">当前状态：整体平稳</text>
