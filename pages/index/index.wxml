@@ -45,7 +45,7 @@
     <view class="section-head">
       <view class="section-title">
         <view></view>
-        <text>健康数据</text>
+        <text>健康数据录入</text>
       </view>
       <text class="more">左右滑动查看更多 ›</text>
     </view>
