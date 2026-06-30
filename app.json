@@ -9,7 +9,7 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "subPackages": [
+  "subpackages": [
     {
       "root": "pkg-wuzang",
       "pages": [
